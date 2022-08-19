@@ -117,9 +117,19 @@ document.addEventListener("DOMContentLoaded", () => {
         slide.addEventListener('mouseenter', () => {
             slide.childNodes[1].style.transform = 'translateY(0)';
         });
+        if(window.innerWidth <= 768) {
+          slide.addEventListener('mouseleave', () => {
+            slide.childNodes[1].style.transform = 'translateY(-70%)';
+        });
+        }else if (window.innerWidth <= 992) {
+          slide.addEventListener('mouseleave', () => {
+            slide.childNodes[1].style.transform = 'translateY(-75%)';
+        });
+        } else {
         slide.addEventListener('mouseleave', () => {
             slide.childNodes[1].style.transform = 'translateY(-80%)';
         });
+        }
     })
 
     const burger__btn = document.querySelector('.burger__btn'),
@@ -133,4 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         
     });   
+
+    window.addEventListener('orientationchange', () => {
+      window.location.reload()
+  })
 });
