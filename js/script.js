@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slide.childNodes[1].style.transform = 'translateY(0)';
         });
         slide.addEventListener('mouseleave', () => {
-            slide.childNodes[1].style.transform = 'translateY(-70%)';
+            slide.childNodes[1].style.transform = 'translateY(-80%)';
         });
     })
 
